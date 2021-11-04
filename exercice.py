@@ -5,7 +5,9 @@ from collections import deque
 
 
 def get_fibonacci_number(TODO):
-	liste = []
+	liste = [0,1]
+	fibonacci_number = liste[i-1] + liste[i-2]
+	liste.append(fibonacci_number)
 	for i in range (TODO+1):
 		if i == 0:
 			liste.append(0)
