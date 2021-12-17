@@ -5,8 +5,19 @@ from collections import deque
 
 
 def get_fibonacci_number(TODO):
+	liste = []
+	for i in range (TODO+1):
+		if i == 0:
+			liste.append(0)
+			pass
+		elif i == 1:
+			liste.append(1)
+			pass
+		else:
+			fibonacci_number = liste[i-1] + liste[i-2]
+			liste.append(fibonacci_number)
 	
-	return 1
+	return liste[-1]
 
 #def get_fibonacci_sequence(TODO):
 	#pass
@@ -22,9 +33,8 @@ def get_fibonacci_number(TODO):
 
 
 if __name__ == "__main__":
-	# print([get_fibonacci_number(0), get_fibonacci_number(1), get_fibonacci_number(2)])
-	# print([get_fibonacci_number(i) for i in range(10)])
-	# print()
+	print([get_fibonacci_number(0), get_fibonacci_number(1), get_fibonacci_number(2)])
+	print([get_fibonacci_number(i) for i in range(10)])
 
 	#print(get_fibonacci_sequence(1))
 	#print(get_fibonacci_sequence(2))
