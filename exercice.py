@@ -3,17 +3,37 @@
 
 from collections import deque
 
-liste = [0,1]
+
 def get_fibonacci_number(TODO):
-	if len(liste) != TODO + 1: 
-		liste.append(liste[-1] + liste[-2])
-		return (get_fibonacci_number(TODO))
-	else:
-		return liste[-1]
+
+    if TODO == 0:
+        number = 0
+    elif TODO == 1:
+        number = 1
+    else:
+        number = get_fibonacci_number(TODO - 1) + get_fibonacci_number (TODO - 2)
+    return number
 
 
-def get_fibonacci_sequence(TODO):
-	pass
+
+def get_fibonacci_sequence(TODO, liste = [0,1]):
+	x = None
+	if TODO == 0:
+		x = []
+	
+	elif TODO == 1:
+		x = [0]
+	
+	elif len(liste) < TODO:
+		x = get_fibonacci_sequence(TODO, liste + [liste[-1] + liste[-2]])
+	
+	elif len(liste) == TODO:
+		x = liste
+	
+	return x
+
+
+
 
 def get_sorted_dict_by_decimals(TODO):
 	pass
@@ -61,9 +81,9 @@ if __name__ == "__main__":
 		print(fi, end=" ")
 	print("\n")
 
-	lucas = build_recursive_sequence_generator(TODO)
-	print(f"Lucas : {[elem for elem in lucas(10)]}")
-	perrin = build_recursive_sequence_generator(TODO)
-	print(f"Perrin : {[elem for elem in perrin(10)]}")
-	hofstadter_q = build_recursive_sequence_generator(TODO)
-	print(f"Hofstadter-Q : {[elem for elem in hofstadter_q(10)]}")
+	# lucas = build_recursive_sequence_generator(TODO)
+	# print(f"Lucas : {[elem for elem in lucas(10)]}")
+	# perrin = build_recursive_sequence_generator(TODO)
+	# print(f"Perrin : {[elem for elem in perrin(10)]}")
+	# hofstadter_q = build_recursive_sequence_generator(TODO)
+	# print(f"Hofstadter-Q : {[elem for elem in hofstadter_q(10)]}")

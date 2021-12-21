@@ -1,7 +1,7 @@
 test_build_recursive_sequence_generator (__main__.TestExercice) ... FAIL
 test_fibonacci_number (__main__.TestExercice) ... ERROR
-test_get_fibonacci_number (__main__.TestExercice) ... ERROR
-test_get_fibonacci_sequence (__main__.TestExercice) ... FAIL
+test_get_fibonacci_number (__main__.TestExercice) ... ok
+test_get_fibonacci_sequence (__main__.TestExercice) ... ok
 test_get_sorted_dict_by_decimals (__main__.TestExercice) ... FAIL
 
 ======================================================================
@@ -11,25 +11,6 @@ Traceback (most recent call last):
   File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/test_exercice.py", line 69, in test_fibonacci_number
     output = [fibo for fibo in fibonacci_numbers(10)]
 TypeError: 'NoneType' object is not iterable
-
-======================================================================
-ERROR: test_get_fibonacci_number (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/test_exercice.py", line 16, in test_get_fibonacci_number
-    output = [get_fibonacci_number(i) for i in range(10)]
-  File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/test_exercice.py", line 16, in <listcomp>
-    output = [get_fibonacci_number(i) for i in range(10)]
-  File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/exercice.py", line 10, in get_fibonacci_number
-    return (get_fibonacci_number(TODO))
-  File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/exercice.py", line 10, in get_fibonacci_number
-    return (get_fibonacci_number(TODO))
-  File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/exercice.py", line 10, in get_fibonacci_number
-    return (get_fibonacci_number(TODO))
-  [Previous line repeated 982 more times]
-  File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/exercice.py", line 8, in get_fibonacci_number
-    if len(liste) != TODO + 1:
-RecursionError: maximum recursion depth exceeded while calling a Python object
 
 ======================================================================
 FAIL: test_build_recursive_sequence_generator (__main__.TestExercice)
@@ -45,21 +26,6 @@ Traceback (most recent call last):
   File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/test_exercice.py", line 82, in test_build_recursive_sequence_generator
     self.fail("l'appel échoue")
 AssertionError: l'appel échoue
-
-======================================================================
-FAIL: test_get_fibonacci_sequence (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/samimniazi/Desktop/inf1007/2021a_c03_ch7_1_exercices-SamimNiazi/test_exercice.py", line 36, in test_get_fibonacci_sequence
-    self.assertListEqual(
-AssertionError: Lists differ: [None, None, None, None] != [[0], [0, 1], [0, 1, 1, 2, 3], [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]]
-
-First differing element 0:
-None
-[0]
-
-- [None, None, None, None]
-+ [[0], [0, 1], [0, 1, 1, 2, 3], [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]]
 
 ======================================================================
 FAIL: test_get_sorted_dict_by_decimals (__main__.TestExercice)
@@ -78,6 +44,6 @@ None
 +  {'bar': 42.9, 'foo': 42.6942, 'qux': 69.4269, 'yeet': 420.1337}]
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.011s
+Ran 5 tests in 0.003s
 
-FAILED (failures=3, errors=2)
+FAILED (failures=2, errors=1)
