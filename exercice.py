@@ -36,10 +36,18 @@ def get_fibonacci_sequence(TODO, liste = [0,1]):
 
 
 def get_sorted_dict_by_decimals(TODO):
-	pass
+	
+	return dict(sorted(TODO.items(),key=lambda x: x[1]%1))
 
 def fibonacci_numbers(length):
-	pass
+	compteur = 0
+	chiffre1, chiffre2 = 0, 1
+	while compteur != length:
+		yield chiffre1
+		chiffre3 = chiffre1 + chiffre2
+		chiffre1 = chiffre2
+		chiffre2 = chiffre3
+		compteur += 1
 
 def build_recursive_sequence_generator(TODO):
 	pass
